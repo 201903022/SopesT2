@@ -63,11 +63,7 @@ Este comando muestra información sobre el uso de la **memoria RAM** y la memori
 - `-h` → Muestra la información en un formato **legible** (GB, MB, KB) en lugar de solo bytes.
 
 🔹 **Ejemplo de salida:**
-```
-              total        used        free      shared  buff/cache   available
-Mem:          15Gi       3.2Gi        8Gi       512Mi        3Gi        11Gi
-Swap:         2Gi        256Mi        1.7Gi
-```
+![Ram](./images/ram.png)
 
 ---
 
@@ -79,9 +75,7 @@ Swap:         2Gi        256Mi        1.7Gi
 - `grep "Cpu(s)"` → Filtra la línea con el **uso de CPU**.
 
 🔹 **Ejemplo de salida:**
-```
-Cpu(s):  8.2% us,  3.1% sy,  0.0% ni, 88.4% id,  0.1% wa,  0.0% hi,  0.1% si,  0.0% st
-```
+![Cpu](./images/cpu.png)
 📌 **Explicación de los valores:**
 - **us** → Uso de CPU por procesos de usuario.
 - **sy** → Uso de CPU por procesos del sistema (kernel).
@@ -97,12 +91,7 @@ Muestra el **espacio usado y disponible** en cada partición del sistema de arch
 - `-h` → Muestra los valores en un formato **legible** (GB, MB, KB).
 
 🔹 **Ejemplo de salida:**
-```
-Filesystem      Size  Used Avail Use% Mounted on
-/dev/sda5       175G   19G  155G  11% /
-devtmpfs        4.0M     0  4.0M   0% /dev
-tmpfs           7.5G   15M  7.5G   1% /dev/shm
-```
+![Disk](./images/disk.png)
 📌 **Columnas importantes:**
 - **Size** → Tamaño total de la partición.
 - **Used** → Espacio usado.
@@ -125,7 +114,7 @@ chmod +x monitoreo.sh
 ```bash
 ./monitoreo.sh
 ```
-
+![Exec](./images/exec.png)
 ---
 
 ## ✨ **Posibles Mejoras**
