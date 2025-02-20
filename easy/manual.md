@@ -2,7 +2,7 @@
 
 Este script en **Bash** permite monitorear el estado del sistema en tiempo real, mostrando información sobre el **uso de memoria RAM**, **uso de CPU** y **espacio en disco**. Proporciona un menú interactivo que permite seleccionar la opción deseada y ver los resultados en pantalla.
 
-## 📜 **Funcionamiento del Script**
+## **Funcionamiento del Script**
 
 El script funciona dentro de un bucle `while true`, lo que significa que se ejecutará continuamente hasta que el usuario seleccione la opción de salir (`4`).
 
@@ -13,7 +13,7 @@ Cada opción en el menú ejecuta un comando específico del sistema para obtener
 - **`df -h`** → Muestra el espacio en disco disponible de forma clara.
 - **`exit 0`** → Finaliza el script si el usuario elige la opción de salida.
 
-## 📄 **Código del Script**
+##**Código del Script**
 
 ```bash
 #!/bin/bash
@@ -55,7 +55,7 @@ done
 
 ---
 
-## 🛠 **Explicación de los Comandos Utilizados**
+## **Explicación de los Comandos Utilizados**
 
 ### **1️⃣ `free -h` (Memoria RAM)**
 Este comando muestra información sobre el uso de la **memoria RAM** y la memoria de intercambio (**swap**) en el sistema.
@@ -76,7 +76,7 @@ Este comando muestra información sobre el uso de la **memoria RAM** y la memori
 
 🔹 **Ejemplo de salida:**
 ![Cpu](./images/cpu.png)  
-📌 **Explicación de los valores:**
+ **Explicación de los valores:**
 - **us** → Uso de CPU por procesos de usuario.
 - **sy** → Uso de CPU por procesos del sistema (kernel).
 - **id** → CPU inactiva.
@@ -92,7 +92,7 @@ Muestra el **espacio usado y disponible** en cada partición del sistema de arch
 
 🔹 **Ejemplo de salida:**
 ![Disk](./images/disk.png)  
-📌 **Columnas importantes:**
+ **Columnas importantes:**
 - **Size** → Tamaño total de la partición.
 - **Used** → Espacio usado.
 - **Avail** → Espacio disponible.
@@ -101,27 +101,23 @@ Muestra el **espacio usado y disponible** en cada partición del sistema de arch
 
 ---
 
-## 🏁 **Cómo ejecutar el script**
+##  **Cómo ejecutar el script**
 
-1️⃣ **Guarda el archivo** como `monitoreo.sh`
-
-2️⃣ **Otorga permisos de ejecución:**
+ **Otorga permisos de ejecución:**
 ```bash
 chmod +x monitoreo.sh
-```
-
-3️⃣ **Ejecuta el script:**
+```   
+**Ejecuta el script:**
 ```bash
 ./monitoreo.sh
-```
-![Exec](./images/exec.png)
+```  
+![Exec](./images/exec.png)  
 ---
 
-## ✨ **Posibles Mejoras**
-✅ Guardar los registros en un archivo `monitoreo.log`.
-✅ Monitoreo en tiempo real con `watch`.
-✅ Notificaciones si la RAM o CPU superan un umbral.
-✅ Mostrar solo el espacio libre del disco (`df -h --output=avail /`).
+##  **Posibles Mejoras**
+- Guardar los registros en un archivo `monitoreo.log`.
+- Monitoreo en tiempo real con `watch`.
+- Notificaciones si la RAM o CPU superan un umbral.
+- Mostrar solo el espacio libre del disco (`df -h --output=avail /`).
 
-📌 **¿Quieres que agreguemos más funcionalidades? ¡Abierto a mejoras! 🚀**
 

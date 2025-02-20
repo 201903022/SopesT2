@@ -2,13 +2,13 @@
 
 Este script en **Bash** permite monitorear el estado del sistema en tiempo real, mostrando información sobre el **uso de memoria RAM**, **uso de CPU** y **espacio en disco**. También permite el monitoreo en tiempo real y el almacenamiento de registros en un archivo de log.
 
-## 📜 **Funcionamiento del Script**
+##  **Funcionamiento del Script**
 
 El script funciona dentro de un bucle `while true`, lo que significa que se ejecutará continuamente hasta que el usuario seleccione la opción de salir (`8`). 
 
 Cada opción en el menú ejecuta una función específica para obtener información relevante.
 
-## 📄 **Código del Script**
+##  **Código del Script**
 
 ```bash
 #!/bin/bash
@@ -43,7 +43,7 @@ monitor_ram() {
 }
 ```
 
-## 🛠 **Explicación de los Comandos Clave**
+##  **Explicación de los Comandos Clave**
 
 ### **awk**
 `awk` es una herramienta de procesamiento de texto utilizada para filtrar y manipular datos de salida.
@@ -77,7 +77,7 @@ Explicación:
 - `df -h --output=avail /` → Muestra solo la columna de espacio disponible en disco.
 - `tail -n 1` → Toma solo la última línea (para evitar imprimir el encabezado).
 
-## 📌 **Explicación del Menú**
+##  **Explicación del Menú**
 
 Cada opción del menú llama a una función específica:
 - **1) Ver uso de memoria RAM** → Llama a `monitor_ram()`
@@ -87,14 +87,14 @@ Cada opción del menú llama a una función específica:
 - **7) Ver registros guardados** → Llama a `ver_logs()`
 - **8) Salir** → Termina el script.
 
-## 🏁 **Cómo Ejecutar el Script**
+##  **Cómo Ejecutar el Script**
 
 ```bash
 chmod +x monitoreo.sh
 ./monitoreo.sh
 ```
 
-✅ **Listo para usar y monitorear tu sistema en tiempo real! 🚀**
+ **Listo para usar y monitorear tu sistema en tiempo real **
 
 # Ejemplo de archivo de salida 
 
