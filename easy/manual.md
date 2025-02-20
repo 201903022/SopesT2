@@ -1,4 +1,3 @@
-# SopesT2
 # Monitor de Sistema en Bash
 
 Este script en **Bash** permite monitorear el estado del sistema en tiempo real, mostrando información sobre el **uso de memoria RAM**, **uso de CPU** y **espacio en disco**. Proporciona un menú interactivo que permite seleccionar la opción deseada y ver los resultados en pantalla.
