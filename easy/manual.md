@@ -63,7 +63,7 @@ Este comando muestra información sobre el uso de la **memoria RAM** y la memori
 - `-h` → Muestra la información en un formato **legible** (GB, MB, KB) en lugar de solo bytes.
 
 🔹 **Ejemplo de salida:**
-![Ram](./images/ram.png)
+![Ram](./images/ram.png)  
 
 ---
 
@@ -75,7 +75,7 @@ Este comando muestra información sobre el uso de la **memoria RAM** y la memori
 - `grep "Cpu(s)"` → Filtra la línea con el **uso de CPU**.
 
 🔹 **Ejemplo de salida:**
-![Cpu](./images/cpu.png)
+![Cpu](./images/cpu.png)  
 📌 **Explicación de los valores:**
 - **us** → Uso de CPU por procesos de usuario.
 - **sy** → Uso de CPU por procesos del sistema (kernel).
@@ -91,7 +91,7 @@ Muestra el **espacio usado y disponible** en cada partición del sistema de arch
 - `-h` → Muestra los valores en un formato **legible** (GB, MB, KB).
 
 🔹 **Ejemplo de salida:**
-![Disk](./images/disk.png)
+![Disk](./images/disk.png)  
 📌 **Columnas importantes:**
 - **Size** → Tamaño total de la partición.
 - **Used** → Espacio usado.

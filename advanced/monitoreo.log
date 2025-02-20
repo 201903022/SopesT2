@@ -1,0 +1,17 @@
+📊 Información general de la RAM:
+               total        used        free      shared  buff/cache   available
+Mem:            14Gi       7.1Gi       543Mi        93Mi       7.8Gi       7.9Gi
+Swap:          8.0Gi          0B       8.0Gi
+💾 RAM usada: 7.0Gi
+✅ RAM libre: 560Mi
+📊 Información general de la RAM:
+               total        used        free      shared  buff/cache   available
+Mem:            14Gi       7.0Gi       568Mi        93Mi       7.8Gi       7.9Gi
+Swap:          8.0Gi          0B       8.0Gi
+✅ RAM libre (disponible): 7.9Gi
+✅ Espacio disponible:  155G
+📈 Uso de CPU: 4.1%
+%Cpu(s):  2.0 us,  2.0 sy,  0.0 ni, 95.2 id,  0.0 wa,  0.0 hi,  0.7 si,  0.0 st 
+📈 Uso de CPU: 4%
+%Cpu(s):  2.1 us,  2.1 sy,  0.0 ni, 95.2 id,  0.0 wa,  0.7 hi,  0.0 si,  0.0 st 
+💾 Espacio ocupado:   19G

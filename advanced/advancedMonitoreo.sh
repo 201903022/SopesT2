@@ -2,15 +2,33 @@
 
 LOG_FILE="monitoreo.log"
 
-# Función para monitoreo de RAM
+# Función para monitoreo de RAM con submenú
 monitor_ram() {
-    RAM_USED=$(free | awk '/Mem:/ {printf "%.2f", $3/$2 * 100}')
-    echo "📊 Uso de memoria RAM: $RAM_USED%" | tee -a $LOG_FILE
-    free -h | tee -a $LOG_FILE
-    if (( $(echo "$RAM_USED > 80" | bc -l) )); then
-        notify-send "⚠️ ALTO USO DE RAM: $RAM_USED%"
-    fi
+    echo "📊 Opciones de monitoreo de RAM:"
+    echo "1) Información general"
+    echo "2) RAM usada"
+    echo "3) RAM libre"
+    read -p "Seleccione una opción: " opcion_ram
+
+    case $opcion_ram in
+        1)
+            echo "📊 Información general de la RAM:" | tee -a $LOG_FILE
+            free -h | tee -a $LOG_FILE
+            ;;
+        2)
+            RAM_USED=$(free -h | awk '/Mem:/ {print $3}')
+            echo "💾 RAM usada: $RAM_USED" | tee -a $LOG_FILE
+            ;;
+        3)
+            RAM_FREE=$(free -h | awk '/Mem:/ {print $7}')
+            echo "✅ RAM libre (disponible): $RAM_FREE" | tee -a $LOG_FILE
+            ;;
+        *)
+            echo "❌ Opción inválida, regresando al menú principal."
+            ;;
+    esac
 }
+
 
 # Función para monitoreo de CPU
 monitor_cpu() {
@@ -22,10 +40,31 @@ monitor_cpu() {
     fi
 }
 
-# Función para monitoreo de Disco
+# Función para monitoreo de Disco con submenú
 monitor_disco() {
-    echo "💾 Espacio disponible en disco:" | tee -a $LOG_FILE
-    df -h --output=avail / | tail -n 1 | tee -a $LOG_FILE
+    echo "💾 Opciones de monitoreo de Disco:"
+    echo "1) Información general"
+    echo "2) Espacio disponible"
+    echo "3) Espacio ocupado"
+    read -p "Seleccione una opción: " opcion_disco
+
+    case $opcion_disco in
+        1)
+            echo "💾 Información general del disco:" | tee -a $LOG_FILE
+            df -h | tee -a $LOG_FILE
+            ;;
+        2)
+            DISK_AVAILABLE=$(df -h --output=avail / | tail -n 1)
+            echo "✅ Espacio disponible: $DISK_AVAILABLE" | tee -a $LOG_FILE
+            ;;
+        3)
+            DISK_USED=$(df -h --output=used / | tail -n 1)
+            echo "💾 Espacio ocupado: $DISK_USED" | tee -a $LOG_FILE
+            ;;
+        *)
+            echo "❌ Opción inválida, regresando al menú principal."
+            ;;
+    esac
 }
 
 # Función para ver los registros guardados
